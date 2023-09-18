@@ -44,7 +44,7 @@
     "android"
   ],
   "repository": "https://github.com/danieldekerlegand/react-native-amplify-s3",
-  "author": "danieldekerlegandevolve <daniel.dekerlegand@evolvemedia.ai> (https://github.com/danieldekerlegand)",
+  "author": "danieldekerlegand <dldekerl@gmail.com> (https://github.com/danieldekerlegand)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/danieldekerlegand/react-native-amplify-s3/issues"
