@@ -17,6 +17,10 @@ const AmplifyS3 = NativeModules.AmplifyS3
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return AmplifyS3.multiply(a, b);
+export function setup(): Promise<boolean> {
+  return AmplifyS3.setup();
+}
+
+export function uploadFile(): Promise<boolean> {
+  return AmplifyS3.uploadFile();
 }

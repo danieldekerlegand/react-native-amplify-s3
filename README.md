@@ -11,11 +11,12 @@ npm install react-native-amplify-s3
 ## Usage
 
 ```js
-import { multiply } from 'react-native-amplify-s3';
+import { setup, uploadFile } from 'react-native-amplify-s3';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await setup();
+const result = await uploadFile();
 ```
 
 ## Contributing

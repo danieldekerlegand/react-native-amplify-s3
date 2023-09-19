@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E555C0D2413F4C50049A1A2 /* AmplifyS3.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* AmplifyS3.mm */; };
-		F4FF95D7245B92E800C19C63 /*  AmplifyS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /*  AmplifyS3.swift */; };
+		E9B15BED2AB9058E001A2FC4 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = E9B15BEC2AB9058E001A2FC4 /* AWSCognitoAuthPlugin */; };
+		E9B15BEF2AB9058E001A2FC4 /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = E9B15BEE2AB9058E001A2FC4 /* AWSS3StoragePlugin */; };
+		E9B15BF12AB9058E001A2FC4 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = E9B15BF02AB9058E001A2FC4 /* Amplify */; };
+		F4FF95D7245B92E800C19C63 /* AmplifyS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* AmplifyS3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9B15BF12AB9058E001A2FC4 /* Amplify in Frameworks */,
+				E9B15BED2AB9058E001A2FC4 /* AWSCognitoAuthPlugin in Frameworks */,
+				E9B15BEF2AB9058E001A2FC4 /* AWSS3StoragePlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +80,11 @@
 			dependencies = (
 			);
 			name = AmplifyS3;
+			packageProductDependencies = (
+				E9B15BEC2AB9058E001A2FC4 /* AWSCognitoAuthPlugin */,
+				E9B15BEE2AB9058E001A2FC4 /* AWSS3StoragePlugin */,
+				E9B15BF02AB9058E001A2FC4 /* Amplify */,
+			);
 			productName = RCTDataManager;
 			productReference = 134814201AA4EA6300B7C361 /* libAmplifyS3.a */;
 			productType = "com.apple.product-type.library.static";
@@ -102,6 +112,9 @@
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
+			packageReferences = (
+				E9B15BEB2AB9058E001A2FC4 /* XCRemoteSwiftPackageReference "amplify-swift" */,
+			);
 			productRefGroup = 58B511D21A9E6C8500147676;
 			projectDirPath = "";
 			projectRoot = "";
@@ -117,7 +130,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4FF95D7245B92E800C19C63 /* AmplifyS3.swift in Sources */,
-				B3E7B58A1CC2AC0600A0062D /* AmplifyS3.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +290,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9B15BEB2AB9058E001A2FC4 /* XCRemoteSwiftPackageReference "amplify-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9B15BEC2AB9058E001A2FC4 /* AWSCognitoAuthPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9B15BEB2AB9058E001A2FC4 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSCognitoAuthPlugin;
+		};
+		E9B15BEE2AB9058E001A2FC4 /* AWSS3StoragePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9B15BEB2AB9058E001A2FC4 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSS3StoragePlugin;
+		};
+		E9B15BF02AB9058E001A2FC4 /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9B15BEB2AB9058E001A2FC4 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = Amplify;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 58B511D31A9E6C8500147676 /* Project object */;
 }
